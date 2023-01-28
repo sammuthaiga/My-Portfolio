@@ -39,7 +39,8 @@ const NavBar = () => {
         
         ))}      
         </ul>
-        <div onClick={() => setNav(!nav)} className='cursor-pointer pr-4 z-10 text-gray-500 md:hidden'>
+        <div onClick={() => setNav(!nav)} 
+        className='cursor-pointer pr-4 z-10 text-gray-500 md:hidden'>
             {nav ? <FaTimes size={30} /> : <FaBars size={30}/>}
         </div>
         {nav &&(
@@ -47,7 +48,7 @@ const NavBar = () => {
               left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500'>
                       {links.map(({id, link})=> (   /* iterate through all links applying same stlylling in all of them and destructure*/
                    <li key={id} 
-                   className='px-4 cursor-pointer capitalize py-6 text-4xl'>
+                   className='px-4 cursor-pointer capitalize py-6 text-4xl md:visible'>
                       {link}
               </li>
               ))}    
