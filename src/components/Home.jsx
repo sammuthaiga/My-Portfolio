@@ -12,8 +12,8 @@ const Home = () => {
             <p className='text-gray-500 py-4 max-w-md'>
                 I have 2 years of experience building and designing software.
                 Currently I have focused on developing web applications using 
-                technologies like React, Tailwind and Next JS for my frontend designs, GraphQL query language to build my APIs
-                and ruby for my backend.
+                technologies like JavaScript, React, Tailwind and Next JS for my frontend designs, GraphQL query language to build my APIs
+                and Ruby for my backend.
             </p>
             <div>
                 <button className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'>
