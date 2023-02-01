@@ -1,11 +1,35 @@
 import React from 'react'
 import flexgymprj from '../assets/portfolio/flexgymprj.png';
-/* import danretstoresprj from '../assets/portfolio/danretstoresprj.png';
-import arrayDestruct from '../assets/portfolio/arrayDestruct.png';
-import installNode from '../assets/portfolio/installNode.png';
-import navbar from '../assets/portfolio/navbar.png';
- */
+import danretstoresprj from '../assets/portfolio/danretstoresprj.png';
+import arrayDestruct from '../assets/portfolio/arrayDestruct.jpg';
+import installNode from '../assets/portfolio/installNode.jpg';
+import navbar from '../assets/portfolio/navbar.jpg';
+
 const Portfolio = () => {
+  const portfolios = [
+    {
+      id: 1,
+      src : flexgymprj,
+    },
+    {
+      id: 2,
+      src : danretstoresprj,
+    },
+    {
+      id: 3,
+      src : installNode,
+    },
+    {
+      id: 4,
+      src : navbar,
+    },
+    {
+      id: 5,
+      src : arrayDestruct,
+    }
+  ]
+ 
+ 
   return (
     <div name ="portfolio" className='bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen'>
 
@@ -15,10 +39,13 @@ const Portfolio = () => {
             <p className='py-6'>Kindly check out  some of my projects</p>
           </div>
 
+          
           <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
 
-            <div className='shadow-md shadow-gray-600 rounded-lg'>
-              <img src={flexgymprj} 
+          {portfolios.map(({id, src}) => (
+              <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
+              <img 
+              src={src} 
               alt=""
               className='rounded-md duration-200 hover:scale-105'
               />
@@ -31,6 +58,10 @@ const Portfolio = () => {
                   </button>
               </div>
             </div>
+            ))
+  }
+
+          
           </div>
         </div>
 
